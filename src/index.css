@@ -1,0 +1,69 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+.dark .bg-white {
+  @apply bg-gray-800;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-300;
+}
+
+.dark .border {
+  @apply border-gray-700;
+}
+
+.dark input, .dark select {
+  @apply bg-gray-700 text-white;
+}
+
+.dark .rbc-calendar {
+  @apply bg-gray-800 text-white;
+}
+
+.dark .rbc-toolbar button {
+  @apply bg-gray-700 text-white;
+}
+
+.dark .rbc-month-view, .dark .rbc-time-view {
+  @apply border-gray-700;
+}
+
+.dark .rbc-day-bg + .rbc-day-bg, .dark .rbc-month-row + .rbc-month-row {
+  @apply border-gray-700;
+}
+
+.dark .rbc-off-range-bg {
+  @apply bg-gray-900;
+}
+
+.dark .rbc-today {
+  @apply bg-blue-900;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-300 text-gray-800 hover:bg-gray-400 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors duration-200;
+  }
+
+  .input {
+    @apply w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white transition-colors duration-200;
+  }
+}
